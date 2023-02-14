@@ -1,8 +1,21 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import Sidebar from "./Sidebar";
+
+import { fetchFromAPI } from "../utils/fetchFromAPI";
+import { Videos, Sidebar } from "./";
 
 const Feed = () => {
+	const [selectedCategory, setSelectedCategory] = useState("New");
+	const [videos, setVideos] = useState(null);
+
+	useEffect(() => {
+		setVideos(null);
+
+		fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
+			setVideos(data.items)
+		);
+	}, [selectedCategory]);
+
 	return (
 		<Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
 			<Box
@@ -12,14 +25,17 @@ const Feed = () => {
 					px: { sx: 0, md: 2 },
 				}}
 			>
-				<Sidebar />
+				<Sidebar
+					selectedCategory={selectedCategory}
+					setSelectedCategory={setSelectedCategory}
+				/>
 
 				<Typography
 					className="copyright"
 					variant="body2"
 					sx={{ mt: 1.5, color: "#fff" }}
 				>
-					Copyright 2023 YouTube Clone
+					Copyright © 2022 JSM Media
 				</Typography>
 			</Box>
 
@@ -30,10 +46,10 @@ const Feed = () => {
 					mb={2}
 					sx={{ color: "white" }}
 				>
-					New <span style={{ color: "#f31503" }}>videos</span>
+					{selectedCategory} <span style={{ color: "#FC1503" }}>videos</span>
 				</Typography>
 
-        <Videos />
+				<Videos videos={videos} />
 			</Box>
 		</Stack>
 	);
