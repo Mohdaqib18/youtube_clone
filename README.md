@@ -6,6 +6,7 @@ This Youtube Clone App features all functionalities a Youtube app does. It consi
 # Note: the API used in this app supports limited keywords for search: i.e you can search for music, news, gaming, education and more... 
 
 
+
 # You can click on different categories to display related videos
 #![Youtube](https://user-images.githubusercontent.com/37264147/218911769-19cc93d5-3e59-4e8c-a2e5-e8d4b821133e.gif)
 
