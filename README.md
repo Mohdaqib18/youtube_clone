@@ -3,10 +3,7 @@ https://aqib-frontend-dev-youtubeclone.netlify.app
 
 # Youtube_Clone
 This Youtube Clone App features all functionalities a Youtube app does. It consists of stunning video sections, custom categories, channel pages, and, most importantly, you can play videos straight from your YouTube Clone App!
-# Note: the API used in this app supports limited keywords for search: i.e you can search for music, news, gaming, education and more... 
-
-
-
+Note: the API used in this app supports limited keywords for search: i.e you can search for music, news, gaming, education and more... 
 
 
 # #You can click on different categories to display related videos
