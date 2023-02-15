@@ -34,7 +34,7 @@ export const categories = [
 	{ name: "Crypto", icon: <DeveloperModeIcon /> },
 ];
 
-export const demoThumbnailUrl = "https://unsplash.com/photos/qHINwvp7mHs";
+export const demoThumbnailUrl = "https://placehold.jp/300x300.png";
 export const demoChannelUrl = "/channel/UCq-Fj5jknLsUf-MWSy4_brA";
 export const demoVideoUrl = "/video/dZ0fwJojhrs";
 export const demoChannelTitle = "T-Series";
